@@ -32,7 +32,8 @@ void realizarCompra(struct Produto *produto)
 
     if (quantidadeCompra > 0)
     {
-        produto->quantidade += quantidadeCompra;
+        produto -> quantidade += quantidadeCompra;
+        
         printf("Compra realizada com sucesso!\n");
         printf("\n");
 
@@ -40,7 +41,7 @@ void realizarCompra(struct Produto *produto)
 
         printf("Deseja voltar para o menu?\n");
         printf("1 - Sim\n");
-        printf("2 - Não\n");
+        printf("2 - NÃ£o\n");
         scanf("%d", &opcao2);
 
         switch (opcao2)
@@ -51,21 +52,21 @@ void realizarCompra(struct Produto *produto)
 
         default:
         limpatela();
-            printf("Obrigado pela preferência :)!\n");
+            printf("Obrigado pela preferÃªncia :)!\n");
             exit(0);
             break;
         }
     }
     else
     {
-        printf("Quantidade inválida!\n");
+        printf("Quantidade invÃ¡lida!\n");
     }
 }
 
 void consultarEstoque(struct Produto produto)
 {
     printf("\nNome do Produto: %s\n", produto.nome);
-    printf("Preço: R$ %.2f\n", produto.preco);
+    printf("PreÃ§o: R$ %.2f\n", produto.preco);
     printf("Quantidade em Estoque: %d\n", produto.quantidade);
     printf("Valor Total em Estoque: R$ %.2f\n\n", calcularValorTotal(produto));
 
@@ -73,7 +74,7 @@ void consultarEstoque(struct Produto produto)
 
     printf("Deseja voltar para o menu?\n");
     printf("1 - Sim\n");
-    printf("2 - Não\n");
+    printf("2 - NÃ£o\n");
     scanf("%d", &opcao2);
 
     switch (opcao2)
@@ -84,7 +85,7 @@ void consultarEstoque(struct Produto produto)
 
     default:
     limpatela();
-        printf("Obrigado pela preferência :)!\n");
+        printf("Obrigado pela preferÃªncia :)!\n");
         exit(0);
         break;
     }
@@ -101,12 +102,12 @@ int main()
     do
     {
         printf("__________________________________\n");
-        printf("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨MENU¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n");
-        printf("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n");
+        printf("Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨MENUÂ¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨\n");
+        printf("Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨\n");
         printf("1 - Realizar uma compra\n");
         printf("2 - Consultar estoque\n");
         printf("3 - Sair\n");
-        printf("Insira a opção desejada: ");
+        printf("Insira a opÃ§Ã£o desejada: ");
         scanf("%d", &opcao);
 
         limpatela();
@@ -120,14 +121,13 @@ int main()
             consultarEstoque(meuProduto);
             break;
         case 3:
-            printf("Volte sempre :)\n");
+            printf("Volte sempre :)!\n");
             break;
 
         default:
-            printf("Opção inválida!\nInsira novamente.\n");
+            printf("OpÃ§Ã£o invÃ¡lida!\nInsira novamente.\n");
             break;
         }
-
     } while (opcao != 3);
 
     return 0;
