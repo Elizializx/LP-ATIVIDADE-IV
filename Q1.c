@@ -45,15 +45,16 @@ void procurar_contato(struct contato_dados *contato, char *procurar)
          return;
         }
     }
-
-    printf("Contato n„o encontrado ou n„o existente.\n");
+    
+    printf("\n");
+    printf("Contato n√£o encontrado ou n√£o existente.\n");
 
     int opcao3;
     int opcao4;
 
     printf("\nDeseja voltar ao menu?\n ");
     printf("1 - Sim\n");
-    printf(" 2 - N„o\n");
+    printf(" 2 - N√£o\n");
     scanf("%d", &opcao3);
 
     limpatela();
@@ -109,7 +110,7 @@ int main()
 
     printf("\n\nDeseja cadastrar/salvar algum contato?\n");
     printf("1 - Sim\n");
-    printf("2 - N„o\n");
+    printf("2 - N√£o\n");
     scanf("%d", &opcao1);
 
     limpatela();
@@ -127,7 +128,7 @@ int main()
         {
             fflush(stdin);
 
-            printf("Nome do %d∫ contato : ", i + 1);
+            printf("Nome do %d¬∫ contato : ", i + 1);
             fgets(contato[i].nome, MAX_CARACTERES, stdin);
 
             printf("Telefone: ");
@@ -147,7 +148,7 @@ int main()
         break;
 
     default:
-        printf("OpÁ„o inv·lida!");
+        printf("Op√ß√£o inv√°lida!");
         break;
     }
 
@@ -155,7 +156,7 @@ int main()
 
     printf("Deseja procurar algum contato?\n");
     printf("1 - Sim\n");
-    printf("2 - N„o\n");
+    printf("2 - N√£o\n");
     scanf("%d", &opcao2);
 
     fflush(stdin);
@@ -177,7 +178,7 @@ int main()
         break;
 
     default:
-        printf("OpÁ„o inv·lida!\n");
+        printf("Op√ß√£o inv√°lida!\n");
         break;
     }
 
