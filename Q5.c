@@ -9,8 +9,8 @@
 void menu()
 {
     printf("_________________________________\n");
-    printf("¨¨¨¨¨¨¨¨MENU FUNCIONÁRIOS¨¨¨¨¨¨¨¨\n");
-    printf("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n");
+    printf("Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨MENU FUNCIONÃRIOSÂ¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨\n");
+    printf("Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨Â¨\n");
 }
 
 void limpatela()
@@ -48,6 +48,7 @@ int main()
     setlocale(LC_ALL, "portuguese");
 
     struct Funcionario funcionarios[MAX_FUNCIONARIOS];
+    
     int numFuncionarios;
     int i;
 
@@ -56,20 +57,20 @@ int main()
     printf("BEM-VINDO!");
     printf("\n\n");
 
-    printf("Insira a quantidade de funcionários a serem registrados: ");
+    printf("Insira a quantidade de funcionÃ¡rios a serem registrados: ");
     scanf("%d", &numFuncionarios);
 
     limpatela();
 
     for (i = 0; i < numFuncionarios; i++)
     {
-        printf("Insira o nome do %dº funcionário: ", i + 1);
+        printf("Insira o nome do %dÂº funcionÃ¡rio: ", i + 1);
         scanf("%s", funcionarios[i].nome);
 
-        printf("Insira o cargo do funcionário: ", i + 1);
+        printf("Insira o cargo do funcionÃ¡rio: ", i + 1);
         scanf("%s", funcionarios[i].cargo);
 
-        printf("Insira o salário do funcionário: ", i + 1);
+        printf("Insira o salÃ¡rio do funcionÃ¡rio: ", i + 1);
         scanf("%f", &funcionarios[i].salario);
 
         limpatela();
@@ -77,7 +78,7 @@ int main()
 
     char cargoProgramador[50];
 
-    printf("Insira o cargo que deseja calcular a média salarial: ");
+    printf("Insira o cargo que deseja calcular a mÃ©dia salarial: ");
     scanf("%s", cargoProgramador);
 
     limpatela();
@@ -99,11 +100,11 @@ int main()
 
     if (mediaSalarialProgramadores > 0)
     {
-        printf("A média salarial dos %s é: R$ %.2f\n", cargoProgramador, mediaSalarialProgramadores);
+        printf("A mÃ©dia salarial dos %s Ã©: R$ %.2f\n", cargoProgramador, mediaSalarialProgramadores);
     }
     else
     {
-        printf("Nenhum funcionário encontrado com o cargo %s.\n", cargoProgramador);
+        printf("Nenhum funcionÃ¡rio encontrado com o cargo %s.\n", cargoProgramador);
     }
 
     return 0;
